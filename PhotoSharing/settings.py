@@ -13,7 +13,7 @@ SECRET_KEY = "django-insecure-p6cpy_+0-gjz-w+e96#fx1$z_=ib@7p)in8lu80ml8e*6sqq@y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "photos.apps.PhotosConfig",
+    "storages",
 ]
 
 MIDDLEWARE = [
@@ -114,5 +115,10 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
+AWS_QUERYSTRING_AUTH =FALSE
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID = 'AKIAQ5DI6QXFRTJIYAXL'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'photo-album-django-aws'
+
