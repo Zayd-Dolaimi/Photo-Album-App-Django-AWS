@@ -118,5 +118,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 AWS_QUERYSTRING_AUTH =FALSE
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID = 'AKIAQ5DI6QXFRTJIYAXL'
+AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'photo-album-django-aws'
 
